@@ -49,6 +49,7 @@
     "gh-pages": "^2.2.0",
     "html-webpack-plugin": "4.5.0",
     "identity-obj-proxy": "3.0.0",
+    "immer": "^9.0.15",
     "jest": "26.6.0",
     "jest-circus": "26.6.0",
     "jest-resolve": "26.6.0",
