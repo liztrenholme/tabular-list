@@ -1,12 +1,13 @@
 import './tabular.css';
 import data from './fake-data.json'
-import { useState,useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import fontawesome from '@fortawesome/fontawesome'
 import { faCheckSquare, faCoffee, faArrowUp, faArrowDown } from '@fortawesome/fontawesome-free-solid'
-import { 
+import {
     // alphaSort, numSort, onDragStart, onDragOver, onDrop,
-arrayMove } from './utils';
+    arrayMove
+} from './utils';
 
 fontawesome.library.add(faCheckSquare, faCoffee, faArrowUp, faArrowDown);
 
@@ -18,7 +19,7 @@ function Tabular() {
 
     console.log('data...', data)
     const headers = [...new Set(data.map(i => Object.keys(i)).flat())]
-    console.log('headers', headers)
+    // console.log('headers', headers)
     useEffect(() => {
         if (activeSort && activeSort.length) {
             let newD = []
@@ -36,7 +37,17 @@ function Tabular() {
             setTableData(newD)
         }
         // setTableData(data)
-      }, [activeSort, tableData, draggedElement]);
+    }, [activeSort, tableData, draggedElement]);
+
+    const handleResize = (e, val) => {
+        e.persist();
+        console.log('resizing', e, val)
+    }
+    const handleResizeDrop = (e, val) => {
+        e.stopPropagation();
+        e.preventDefault();
+        console.log('resizing', e, val)
+    }
 
     const handleOnDrag = (e, val) => {
         e.persist();
@@ -58,7 +69,7 @@ function Tabular() {
         setDraggedElement(null)
     }
     const handleSetActiveSort = (val, direction) => setActiveSort([val, direction])
-    console.log('tableData',tableData)
+    console.log('tableData', tableData)
     console.log('active  sort is...', activeSort, tableData[0].index, tableData[1].index)
     return (
         <div className="tabular-main">
@@ -71,7 +82,11 @@ function Tabular() {
                                     <FontAwesomeIcon style={{ fontSize: '10px' }} icon="fa-solid fa-arrow-up" onClick={() => handleSetActiveSort(val, 'up')} />
                                     <FontAwesomeIcon style={{ fontSize: '10px' }} icon="fa-solid fa-arrow-down" onClick={() => handleSetActiveSort(val, 'down')} />
                                 </div>
-                                <div className='col-resize' draggable />
+                                <div className='col-resize' 
+                                draggable 
+                                onDragStart={(a) => handleResize(a, val)} 
+                                onDragOver={(a) => handleOnDrag(a, val)}
+                                onDrop={(a) => handleResizeDrop(a, val)} />
                             </div>
                         </th>))}
                     </tr>

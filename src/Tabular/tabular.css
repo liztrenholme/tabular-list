@@ -17,8 +17,9 @@
     cursor: pointer;
 }
 .col-resize {
-    background-color: hotpink;
-    width: 1em;
+    margin: 0 -3px 0 auto;
+    /* background-color: hotpink; */
+    width: 0.2em;
     cursor: col-resize;
 }
 .tabular-cell {
