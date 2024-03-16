@@ -1,0 +1,19 @@
+.tabular-main {
+    width: auto;
+    margin: 1em;
+}
+.tabular-header {
+    white-space: nowrap;
+}
+.tabular-cell {
+    text-align: left;
+    border: 0.5px black solid;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px;
+}
+.tabular-row {
+    border: 10px hotpink solid;
+}
