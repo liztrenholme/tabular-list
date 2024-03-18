@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/tabular-list/static/css/main.8e8e9aa4.chunk.css",
-    "main.js": "/tabular-list/static/js/main.ccb4cfad.chunk.js",
-    "main.js.map": "/tabular-list/static/js/main.ccb4cfad.chunk.js.map",
+    "main.css": "/tabular-list/static/css/main.21aa851d.chunk.css",
+    "main.js": "/tabular-list/static/js/main.f5060317.chunk.js",
+    "main.js.map": "/tabular-list/static/js/main.f5060317.chunk.js.map",
     "runtime-main.js": "/tabular-list/static/js/runtime-main.7db1410f.js",
     "runtime-main.js.map": "/tabular-list/static/js/runtime-main.7db1410f.js.map",
-    "static/js/2.19eb7c25.chunk.js": "/tabular-list/static/js/2.19eb7c25.chunk.js",
-    "static/js/2.19eb7c25.chunk.js.map": "/tabular-list/static/js/2.19eb7c25.chunk.js.map",
+    "static/js/2.6ae93cbd.chunk.js": "/tabular-list/static/js/2.6ae93cbd.chunk.js",
+    "static/js/2.6ae93cbd.chunk.js.map": "/tabular-list/static/js/2.6ae93cbd.chunk.js.map",
     "index.html": "/tabular-list/index.html",
-    "static/css/main.8e8e9aa4.chunk.css.map": "/tabular-list/static/css/main.8e8e9aa4.chunk.css.map",
-    "static/js/2.19eb7c25.chunk.js.LICENSE.txt": "/tabular-list/static/js/2.19eb7c25.chunk.js.LICENSE.txt"
+    "static/css/main.21aa851d.chunk.css.map": "/tabular-list/static/css/main.21aa851d.chunk.css.map",
+    "static/js/2.6ae93cbd.chunk.js.LICENSE.txt": "/tabular-list/static/js/2.6ae93cbd.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.7db1410f.js",
-    "static/js/2.19eb7c25.chunk.js",
-    "static/css/main.8e8e9aa4.chunk.css",
-    "static/js/main.ccb4cfad.chunk.js"
+    "static/js/2.6ae93cbd.chunk.js",
+    "static/css/main.21aa851d.chunk.css",
+    "static/js/main.f5060317.chunk.js"
   ]
 }
