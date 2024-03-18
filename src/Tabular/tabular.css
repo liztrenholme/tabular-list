@@ -31,6 +31,9 @@
     text-overflow: ellipsis;
     max-width: 200px;
 }
+.hide-col {
+    margin: -0.5em 0 0.5em auto;
+}
 /* .inner-cell {
     resize: both;
     overflow: auto;
@@ -53,3 +56,36 @@
     border-top: 2px black solid;
     cursor: move;
 }
+
+/* header styling */
+.tab-header-container {
+    margin: 2em;
+    padding: 1em;
+}
+.header-title {
+    font-size: 1.5em;
+}
+.hidden-cols {
+    cursor: pointer;
+}
+li {
+    list-style-type: none;
+}
+.resize-handle {
+    display: block;
+    position: absolute;
+    cursor: col-resize;
+    width: 7px;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    border-right: 2px solid transparent;
+  }
+  
+  .resize-handle:hover {
+    border-color: #ccc;
+  }
+  
+  .resize-handle.active {
+    border-color: #517ea5;
+  }

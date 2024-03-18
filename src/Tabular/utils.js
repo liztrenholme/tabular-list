@@ -1,5 +1,7 @@
 import produce from 'immer'
 
+import { useRef } from 'react';
+
 export const alphaSort = (items, dir, val) => {
     if (dir === 'up') {
     items.sort((a, b) => {
@@ -98,6 +100,7 @@ export function onDrop(evt, setGrid) {
 }
 
 export function arrayMove(arr, old_index, new_index) {
+    console.log(old_index, new_index)
     if (new_index >= arr.length) {
         var k = new_index - arr.length + 1;
         while (k--) {
@@ -106,4 +109,11 @@ export function arrayMove(arr, old_index, new_index) {
     }
     arr.splice(new_index, 0, arr.splice(old_index, 1)[0]);
     return arr; // for testing
+};
+
+export function createHeaders(headers) {
+  return headers.map((item) => ({
+      val: item,
+      ref: useRef()
+  }));
 };
