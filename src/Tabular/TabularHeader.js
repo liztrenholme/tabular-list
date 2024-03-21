@@ -10,11 +10,9 @@ fontawesome.library.add(faCheckSquare, faCoffee, faArrowUp, faArrowDown, faWindo
 function TabularHeader(props) {
     const [dropdownOpen, setDropdownOpen] = useState(false)
     const handleSetDropdownOpen = () => dropdownOpen ? setDropdownOpen(false) : setDropdownOpen(true)
-    console.log('cols in props', props.columns)
     return (
         <div className="tab-header-container">
             <h1 className='header-title'>{props.headerTitle || 'Tabular List'}</h1>
-            {/* {props.columns} */}
             {props.columns && props.columns.length ? (<div className='hidden-cols' onClick={handleSetDropdownOpen}>
                 <div style={{ display: 'flex', flexDirection: 'row', margin: 'auto', alignItems: 'center', width: '5em',whiteSpace: 'nowrap' }}>
                     Hidden Columns
